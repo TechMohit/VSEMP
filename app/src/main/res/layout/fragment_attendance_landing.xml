@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/LinearLayoutStyle"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_attendance"
+            android:textSize="@dimen/text19sp"
+            android:layout_gravity="center"
+            android:textColor="@color/whitecolor"/>
+-->
+
+        <Spinner
+            style="@style/SpinnerStyleA"
+            android:id="@+id/spinnerForStaff"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/mar_padd_5dp"
+            android:layout_marginStart="@dimen/mar_padd_5dp"
+            android:background="@drawable/spinnerbackground"/>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_attendance">
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_csv"
+                android:textSize="@dimen/text15sp"
+                android:layout_marginTop="@dimen/mar_padd_10dp"
+                android:layout_marginStart="@dimen/mar_padd_10dp"/>
+
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/mar_padd_10dp"
+                android:layout_marginTop="@dimen/mar_padd_10dp">
+
+                <EditText
+                    android:id="@+id/etCsvFileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="#e6e6e6"
+                    android:hint="@string/attach_file"
+                    android:focusable="false"
+                    android:padding="@dimen/mar_padd_5dp"/>
+
+                <ImageView
+                    android:id="@+id/ivAttachCsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:layout_gravity="center"
+                    android:background="@color/colorOrange"
+                    android:src="@drawable/ic_attachment"
+                    android:padding="@dimen/mar_padd_10dp"
+                    android:contentDescription="@string/clickbutton" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:layout_marginTop="@dimen/mar_padd_10dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_margin="@dimen/mar_padd_10dp">
+
+                    <Button
+                        android:id="@+id/btnAttendanceProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen30dp"
+                        android:background="@drawable/btn_orange_2"
+                        android:text="@string/process"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/mar_padd_10dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/whitecolor"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/mar_padd_10dp">
+
+
+                    <TextView
+                        android:id="@+id/tvManuallyUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Manually?"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/mar_padd_5dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

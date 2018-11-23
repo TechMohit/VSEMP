@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayoutStyle"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/mar_padd_14dp">
+
+    <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen160dp"
+                    android:layout_height="@dimen/dimen160dp"
+                    android:src="@drawable/vslogo"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/clickbutton" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle">
+
+                <Button
+                    android:id="@+id/employer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/employer"
+                    android:textColor="@color/whitecolor"
+                    android:background="@drawable/selector_red_left_switch_button"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/employee"
+                    android:textColor="@color/hintColor"
+                    android:background="@drawable/selector_gray_right_switch_button"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutEmployer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/emailEmployer"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/userid"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/TextInputLayout"
+                app:passwordToggleEnabled="true"
+                >
+
+                <EditText
+                    android:id="@+id/passwordEmployer"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/password"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/email_sign_in_buttonEmployer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mar_padd_15dp"
+                android:text="@string/sign_in"
+                android:textStyle="bold"
+                android:textColor="@color/whitecolor"
+                android:background="@drawable/btn_orange_2"/>
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:layout_marginTop="40dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot_your_login_details"
+                    android:textSize="@dimen/text15sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_help_signing_in"
+                    android:paddingStart="@dimen/mar_padd_5dp"
+                    android:textSize="@dimen/text15sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+</LinearLayout>

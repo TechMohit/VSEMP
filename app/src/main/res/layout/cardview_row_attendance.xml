@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewRow"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="@dimen/mar_padd_5dp"
+        android:layout_margin="@dimen/mar_padd_5dp"
+        app:cardBackgroundColor="@color/whitecolor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:gravity="center">
+
+                <com.example.varadhi.addstaff.EmployeeAdd.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle"
+                    android:layout_marginTop="@dimen/mar_padd_2dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/mar_padd_10dp">
+
+                <TextView
+                    android:id="@+id/empName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/abhishek_gupta"
+                    android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+                <TextView
+                    android:id="@+id/empId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vs017bh0007"
+                    android:layout_marginStart="@dimen/mar_padd_5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/attendanceStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:text="Present"
+                    android:textSize="12sp"
+                    android:padding="@dimen/mar_padd_2dp"
+                    android:background="#7db35e"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/mar_padd_5dp"
+                    android:textColor="@color/whitecolor"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

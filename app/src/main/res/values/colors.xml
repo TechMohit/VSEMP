@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4fa4d2</color>
+    <color name="colorPrimaryDark">#05587e</color>
+    <color name="colorAccent">#f27037</color>
+    <color name="colorWhite">#f9f6f7</color>
+    <color name="colorBlack">#434242</color>
+    <color name="colorOrange">#f57531</color>
+
+    <color name="textColor">#464646</color>
+
+    <color name="buttonPressed">#2d2d2d</color>
+    <color name="buttonFocused">#a9b6b9</color>
+    <color name="hintColor">#717071</color>
+    <color name="whitecolor">#fff</color>
+    <color name="bottomIconColor">#f5f2f2</color>
+    <color name="green">#68cc87</color>
+    <color name="red">#ff5e35</color>
+    <color name="green1">#68cc87</color>
+    <color name="checkboxcolor">#f953cf</color>
+    <color name="tab_disable">#979797</color>
+    <color name="tab_enable">#FFFFFF</color>
+    <color name="tab_checked">#912f2f</color>
+    <color name="tab_unchecked">#646363</color>
+    <color name="colorgreen">#3c6144</color>
+    <color name="lightBlue">#55D8FE</color>
+    <color name="lightPurple">#A3A0FB </color>
+    <color name="lightYellow">#FFDA83 </color>
+    <color name="lightRed">#FF8373 </color>
+    <color name="shimmer_color">#a2878787</color>
+
+
+
+</resources>

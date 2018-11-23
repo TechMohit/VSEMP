@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <EditText
+                android:id="@+id/addIseuesRow"
+                style="@style/EditTextStyle"
+                android:digits="@string/alphabetDot"
+                android:hint="@string/issue"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/deleteItemRow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_delete_forever_black_24dp"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:contentDescription="@string/clickbutton" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

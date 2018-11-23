@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/personal"
+        android:title="Personal"
+        android:enabled="true"
+        android:icon="@drawable/ic_man_user"
+        />
+
+    <item
+        android:id="@+id/eduaction"
+        android:title="Education"
+        android:enabled="true"
+        android:icon="@drawable/ic_college_graduation"
+        />
+
+    <item
+        android:id="@+id/experience"
+        android:title="Experience"
+        android:enabled="true"
+        android:icon="@drawable/ic_certification_document_text_paper_black_interface_symbol" />
+
+
+</menu>

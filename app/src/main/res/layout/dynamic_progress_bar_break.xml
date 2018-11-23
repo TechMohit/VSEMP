@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/mar_padd_10dp">
+
+        <TextView
+            android:id="@+id/breakNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="B1"
+            android:layout_weight="1"
+            android:textSize="@dimen/text17sp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarTime"
+            style="@style/MyProgressBarTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:progress="30"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/breakTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="01:55 hrs"
+            android:layout_weight="3"
+            android:textSize="@dimen/text17sp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

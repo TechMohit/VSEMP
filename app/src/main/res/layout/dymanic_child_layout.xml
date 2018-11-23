@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/child_layoutPerTeaching">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_padd_10dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tvChildNumber"
+            style="@style/TextViewStyle1"
+            android:text="@string/_1"
+            android:layout_width="@dimen/dimen30dp"
+            android:textSize="@dimen/text16sp"
+            android:layout_height="@dimen/dimen30dp"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="@color/whitecolor"
+            android:layout_marginTop="@dimen/mar_padd_2dp"
+            android:padding="@dimen/mar_padd_2dp"
+            android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_childSchoolCollage"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar_padd_10dp"
+            android:layout_marginRight="@dimen/mar_padd_10dp"
+            android:orientation="vertical">
+
+         <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             >
+
+             <EditText
+                 android:id="@+id/etChildName"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:hint="@string/child_name"
+                 android:digits="@string/alphabet"
+                 android:maxLength="30"/>
+
+         </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_childClassCity"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/il_cClassBranch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/etChildDob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/d_o_b"
+                        android:focusable="false"
+                        android:drawableEnd="@drawable/ic_calendar"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    style="@style/LinearlayoutWeightStyle"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Spinner
+                        style="@style/SpinnerStyleA"
+                        android:id="@+id/spChildOccupation"
+                        android:background="@drawable/custom_spinner_background" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addChileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutStudy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:visibility="visible">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/childClassCourse"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/class_course"
+                            android:maxLength="30"
+                            android:digits="@string/alphabetNumeric3"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/childSchoolCollegeName"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/school_colleg_name"
+                            android:digits="@string/alphabet"
+                            android:maxLength="30"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/childSchoolCollegeCity"
+                            style="@style/EditTextStyle"
+                            android:maxLength="30"
+                            android:hint="@string/school_colleg_city"
+                            android:digits="@string/alphabet"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutWorking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:visibility="visible">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/childOfficeRole"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/role"
+                            android:maxLength="30"
+                            android:digits="@string/alphabet"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/childOfficeCity"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/cityPresent"
+                            android:digits="@string/alphabet"
+                            android:maxLength="30"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/childOfficeOrganisation"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/organisation_name1"
+                            android:digits="@string/alphabet"
+                            android:maxLength="30"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

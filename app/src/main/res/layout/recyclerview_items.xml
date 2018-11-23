@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="#f2f0f0"
+    app:cardElevation="@dimen/mar_padd_5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.varadhi.addstaff.EmployeeAdd.CircleImageView
+            android:id="@+id/image_circle"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/circle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_name"
+            android:layout_marginTop="@dimen/mar_padd_15dp"
+            android:layout_below="@id/image_circle"
+            android:text="Abhishek Gupta"
+            android:layout_marginStart="@dimen/mar_padd_5dp"
+            android:gravity="start"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_id"
+            android:layout_below="@id/text_view_name"
+            android:text="@string/vs017bh00007"
+            android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:id="@+id/text_view_present"
+        android:text="present"
+        android:gravity="center"
+        android:layout_marginTop="140dp"
+        android:background="#7ab772"
+        android:textColor="#FFFFFF"/>
+</android.support.v7.widget.CardView>

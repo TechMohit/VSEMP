@@ -1,0 +1,101 @@
+<ScrollView style="@style/ScrollViewStyle"
+    android:background="@drawable/gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/LinearLayoutStyle"
+        android:orientation="vertical"
+        tools:context="com.example.varadhi.addstaff.EmployeeAdd.WorkInfoFragment"
+        android:id="@+id/linearLayoutHead">
+
+        <include layout="@layout/staff_info_layout"/>
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_experience"
+                android:textSize="@dimen/text21sp"
+                android:layout_marginEnd="@dimen/mar_padd_10dp"
+                android:textColor="@color/colorOrange"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:layout_weight="2"
+                android:gravity="end">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mar_padd_2dp"
+                    android:background="@drawable/shape_border">
+
+                    <Button
+                        android:id="@+id/button_decrease_count"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="-"
+                        android:gravity="center"
+                        android:textSize="21sp"
+                        android:textColor="@color/whitecolor"
+                        android:background="@color/colorOrange"
+                        />
+
+                    <TextView
+                        android:id="@+id/numberOfExperience"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="@string/_0"
+                        android:gravity="center"
+                        android:background="#fff"
+                        android:textSize="21sp"
+                        android:textColor="#ec6117"
+                        android:inputType="number"
+                        tools:ignore="LabelFor,TextViewEdits" />
+                    <Button
+                        android:id="@+id/button_increase_count"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:text="+"
+                        android:gravity="center"
+                        android:textSize="21sp"
+                        android:background="@color/colorOrange"
+                        android:textColor="@color/whitecolor"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/experience_linear_layout"
+            android:padding="@dimen/mar_padd_5dp">
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+</ScrollView>

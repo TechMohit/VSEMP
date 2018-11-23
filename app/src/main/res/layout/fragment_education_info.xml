@@ -1,0 +1,1159 @@
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScrollViewStyle"
+    android:background="@drawable/gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/mar_padd_5dp"
+        android:visibility="visible">
+
+        <include layout="@layout/staff_info_layout"
+            android:visibility="visible"/>
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_SchoolingDetail">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                app:cardBackgroundColor="@color/whitecolor">
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/schoolInfoLayoutClick">
+
+                    <TextView
+                        android:id="@+id/schoolInfoTextView"
+                        style="@style/TextViewHeader"
+                        android:text="@string/schooling_details"/>
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForSchoolInfo"
+                        style="@style/ImageViewHeader"
+                        android:contentDescription="@string/clickbutton"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_SchoolViews"
+                    style="@style/LinearLayoutHeader"
+                    android:visibility="gone">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeeSchoolName"
+                            style="@style/EditTextStyle"
+                            android:inputType="text"
+                            android:hint="@string/school_name"
+                            android:digits="@string/alphabet"
+                            android:maxLength="45"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeSchoolPercentage"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/percentage"
+                                android:inputType="numberDecimal|numberSigned"
+                                android:maxLength="5"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeSchoolPassing"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/year_of_passing"
+                                android:inputType="number"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeSchoolBoard"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/board"
+                                android:digits="@string/alphabet"
+                                android:maxLength="15"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeSchoolState"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/state"
+                                android:maxLength="15"
+                                android:digits="@string/alphabet"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/tv_school_attach_staff"
+                            android:text="@string/attach_documents"
+                            style="@style/TextViewStyle1"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivAttachSchoolDocs"
+                            android:src="@drawable/ic_attachment_black_24dp"
+                            tools:ignore="ContentDescription"
+                            style="@style/ImageviewStyle"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvAttachSchoolDocs"
+                        style="@style/recyclerViewStyle"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_PUCDetails">
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                android:background="@color/whitecolor">
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/pucInfoLayoutClick">
+
+                    <TextView
+                        android:id="@+id/pucDetailsTextView"
+                        android:text="@string/Puc_details"
+                        style="@style/TextViewHeader"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForPUDetail"
+                        style="@style/ImageViewHeader"
+                        android:contentDescription="@string/clickbutton"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_PUCDetailsViews"
+                    style="@style/LinearLayoutHeader"
+                    android:visibility="gone">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeePUCName"
+                            style="@style/EditTextStyle"
+                            android:inputType="text"
+                            android:hint="@string/school_name"
+                            android:digits="@string/alphabet"
+                            android:maxLength="45"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePUCPercentage"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/percentage"
+                                android:maxLength="5"
+                                android:inputType="numberDecimal|numberSigned" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePUCPassing"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/year_of_passing"
+                                android:inputType="number" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePUCBoard"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/board"
+                                android:digits="@string/alphabet"
+                                android:maxLength="15" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePUCState"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/state"
+                                android:digits="@string/alphabet"
+                                android:maxLength="15" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:text="@string/attach_documents"
+                            style="@style/TextViewStyle1"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivAttachPUCDocs"
+                            android:src="@drawable/ic_attachment_black_24dp"
+                            tools:ignore="ContentDescription"
+                            style="@style/ImageviewStyle"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvAttachPUCDocs"
+                        style="@style/recyclerViewStyle"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_UGDetails">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                app:cardBackgroundColor="@color/whitecolor">
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/UGDetailsLayoutClick">
+
+                    <TextView
+                        android:id="@+id/UGDetailsTextView"
+                        android:text="@string/graduate_details"
+                        style="@style/TextViewHeader"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForUGDetail"
+                        style="@style/ImageViewHeader"
+                        android:contentDescription="@string/clickbutton"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_UGDetailsViews"
+                    style="@style/LinearLayoutHeader"
+                    android:visibility="gone">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeeGraduateCollegeName"
+                            style="@style/EditTextStyle"
+                            android:inputType="text"
+                            android:hint="@string/college_name"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeeGraduateUniversityName"
+                            android:hint="@string/university_name"
+                            android:inputType="text"
+                            style="@style/EditTextStyle"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeGraduateSpecialization"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/specialization"
+                                android:digits="@string/alphabet"
+                                android:maxLength="15"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeGraduateBranchName"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/branch_name"
+                                android:digits="@string/alphabet"
+                                android:maxLength="15"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeGraduatePercentage"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/percentage"
+                                android:maxLength="5"
+                                android:inputType="numberDecimal|numberSigned" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeeGraduatePassingYear"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/year_of_passing"
+                                android:inputType="number"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:text="@string/attach_documents"
+                            style="@style/TextViewStyle1"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivAttachGraduateDocs"
+                            android:src="@drawable/ic_attachment_black_24dp"
+                            tools:ignore="ContentDescription"
+                            style="@style/ImageviewStyle"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvAttachGraduateDocs"
+                        style="@style/recyclerViewStyle"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_PGDetails">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                app:cardBackgroundColor="@color/whitecolor">
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/PGDetailsLayoutClick">
+
+                    <TextView
+                        android:id="@+id/PGDetailsTextView"
+                        android:text="@string/pg_details"
+                        style="@style/TextViewHeader"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForPGDetail"
+                        style="@style/ImageViewHeader"
+                        android:contentDescription="@string/clickbutton"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_PGDetailsViews"
+                    style="@style/LinearLayoutHeader"
+                    android:visibility="gone"
+                    tools:ignore="TooManyViews">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeePGCollegeName"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/college_namea"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeePGUniversityName"
+                            android:hint="@string/university_namea"
+                            style="@style/EditTextStyle"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePGSpecialization"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/specializationa"
+                                android:digits="@string/alphabet"
+                                android:maxLength="35"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePGBranchName"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/branch_namea"
+                                android:digits="@string/alphabet"
+                                android:maxLength="15" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePGPercentage"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/percentagea"
+                                android:maxLength="5"
+                                android:inputType="number|numberDecimal"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePGPassingYear"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/year_of_passinga"
+                                android:inputType="numberSigned|number"
+                                android:maxLength="4"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:text="@string/attach_documents"
+                            style="@style/TextViewStyle1"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivAttachPGDocs"
+                            android:src="@drawable/ic_attachment_black_24dp"
+                            tools:ignore="ContentDescription"
+                            style="@style/ImageviewStyle"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvAttachPGDocs"
+                        style="@style/recyclerViewStyle"/>
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/LinearLayoutStyle"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout_BedDedDetails">
+
+
+        <android.support.v7.widget.CardView
+            style="@style/cardViewStyle"
+            app:cardCornerRadius="@dimen/mar_padd_5dp"
+            app:cardElevation="@dimen/mar_padd_5dp"
+            app:cardBackgroundColor="@color/whitecolor">
+
+        <RelativeLayout
+            style="@style/RelativeLayoutStyle"
+            android:id="@+id/BedDedDetailsLayoutClick">
+
+            <TextView
+                android:id="@+id/BedDedDetailsTextView"
+                android:text="@string/d_ed_b_ed_m_ed"
+                style="@style/TextViewHeader"
+                />
+
+            <ImageView
+                android:id="@+id/btnimageViewUpForBedDedDetail"
+                style="@style/ImageViewHeader"
+                android:contentDescription="@string/clickbutton"/>
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_BedDedDetailsViews"
+                style="@style/LinearLayoutHeader"
+                android:visibility="gone"
+                tools:ignore="TooManyViews">
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/etEmployeeBedDedCollegeName"
+                        style="@style/EditTextStyle"
+                        android:hint="@string/college_namea"
+                        android:digits="@string/alphabet"
+                        android:maxLength="35"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/etEmployeeBedDedUniversityName"
+                        android:hint="@string/university_namea"
+                        style="@style/EditTextStyle"
+                        android:digits="@string/alphabet"
+                        android:maxLength="35"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+
+                    android:baselineAligned="false"
+                    style="@style/LinearLayoutStyle">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayoutWeight">
+
+                        <EditText
+                            android:id="@+id/etEmployeeBedDedSpecialization"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/specializationa"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayoutWeight">
+
+                        <EditText
+                            android:id="@+id/etEmployeeBedDedBranchName"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/branch_namea"
+                            android:digits="@string/alphabet"
+                            android:maxLength="15" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:baselineAligned="false"
+                    style="@style/LinearLayoutStyle">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayoutWeight">
+
+                        <EditText
+                            android:id="@+id/etEmployeeBedDedPercentage"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/percentagea"
+                            android:maxLength="5"
+                            android:inputType="number|numberDecimal"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayoutWeight">
+
+                        <EditText
+                            android:id="@+id/etEmployeeBedDedPassingYear"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/year_of_passinga"
+                            android:inputType="numberSigned|number"
+                            android:maxLength="4"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:text="@string/attach_documents"
+                        style="@style/TextViewStyle1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"/>
+
+                    <ImageView
+                        android:id="@+id/ivAttachBedDedDocs"
+                        android:src="@drawable/ic_attachment_black_24dp"
+                        tools:ignore="ContentDescription"
+                        style="@style/ImageviewStyle"/>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvAttachBedDedDocs"
+                    style="@style/recyclerViewStyle"/>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_PHDDetails">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                app:cardBackgroundColor="@color/whitecolor">
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/phdDetailsLayoutClick">
+
+                    <TextView
+                        android:id="@+id/phdDetailsTextView"
+                        android:text="@string/phd_details"
+                        style="@style/TextViewHeader"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForPhdDetail"
+                        style="@style/ImageViewHeader"
+                        android:contentDescription="@string/clickbutton" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_PhdDetailsViews"
+                    style="@style/LinearLayoutHeader"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeePHDCollegeName"
+                            style="@style/EditTextStyle"
+                            android:hint="@string/college_namea"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/etEmployeePHDUniversityName"
+                            android:hint="@string/university_namea"
+                            style="@style/EditTextStyle"
+                            android:digits="@string/alphabet"
+                            android:maxLength="35"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePHDSpecialization"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/specializationa"
+                                android:maxLength="30"
+                                android:digits="@string/alphabet" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:baselineAligned="false"
+                        style="@style/LinearLayoutStyle">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePHDBranchName"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/branch_namea"
+                                android:maxLength="15"
+                                android:digits="@string/alphabet" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutWeight">
+
+                            <EditText
+                                android:id="@+id/etEmployeePHDPercentage"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/percentagea"
+                                android:maxLength="5"
+                                android:inputType="numberDecimal|numberSigned" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:text="@string/attach_documents"
+                            style="@style/TextViewStyle1"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivAttachPHDDocs"
+                            android:src="@drawable/ic_attachment_black_24dp"
+                            tools:ignore="ContentDescription"
+                            style="@style/ImageviewStyle"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvAttachPHDDocs"
+                        style="@style/recyclerViewStyle"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutStyle"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_AchievemetDetails">
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                app:cardCornerRadius="@dimen/mar_padd_5dp"
+                app:cardElevation="@dimen/mar_padd_5dp"
+                app:cardBackgroundColor="@color/whitecolor">
+
+                <RelativeLayout
+                    style="@style/RelativeLayoutStyle"
+                    android:id="@+id/achievemetDetailsLayoutClick">
+
+                    <TextView
+                        android:id="@+id/achievemetDetailsTextView"
+                        android:text="@string/achievement_details"
+                        style="@style/TextViewHeader"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btnimageViewUpForAchievemetDetail"
+                        style="@style/ImageViewHeader"
+                        android:contentDescription="@string/clickbutton"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_AchievemetDetailsViews"
+                    style="@style/LinearLayoutHeader"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:layout_marginTop="@dimen/mar_padd_5dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_achievements"
+                            android:textSize="@dimen/text19sp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/mar_padd_10dp"
+                            android:textColor="@color/colorOrange"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/mar_padd_1dp"
+                            android:layout_weight="2"
+                            android:gravity="end">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/mar_padd_2dp"
+                                android:background="@drawable/shape_border">
+
+                                <Button
+                                    android:id="@+id/button_decrease_count"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:text="-"
+                                    android:gravity="center"
+                                    android:textSize="21sp"
+                                    android:textColor="@color/whitecolor"
+                                    android:background="@color/colorOrange"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/numberOfAchievements"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:text="@string/_0"
+                                    android:gravity="center"
+                                    android:background="#fff"
+                                    android:textSize="21sp"
+                                    android:textColor="#ec6117"
+                                    android:inputType="number"
+                                    tools:ignore="LabelFor,TextViewEdits" />
+                                <Button
+                                    android:id="@+id/button_increase_count"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:text="+"
+                                    android:gravity="center"
+                                    android:textSize="21sp"
+                                    android:background="@color/colorOrange"
+                                    android:textColor="@color/whitecolor"/>
+
+
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/LinearLayoutStyle"
+                        android:id="@+id/achievementsLayout"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/mar_padd_5dp"/>
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout_SportsDetails">
+
+
+                <android.support.v7.widget.CardView
+                    style="@style/cardViewStyle"
+                    app:cardCornerRadius="@dimen/mar_padd_5dp"
+                    app:cardElevation="@dimen/mar_padd_5dp"
+                    app:cardBackgroundColor="#fff">
+
+                    <RelativeLayout
+                        style="@style/RelativeLayoutStyle"
+                        android:id="@+id/sportsDetailsLayoutClick">
+
+                        <TextView
+                            android:id="@+id/sportsDetailsTextView"
+                            android:text="@string/sports_details"
+                            style="@style/TextViewHeader"
+                            />
+
+                        <ImageView
+                            android:id="@+id/btnimageViewUpForSportsDetail"
+                            style="@style/ImageViewHeader"
+                            android:contentDescription="@string/clickbutton"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_SportsDetailsViews"
+                        style="@style/LinearLayoutHeader"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_sports"
+                                android:textSize="@dimen/text19sp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="@dimen/mar_padd_10dp"
+                                android:textColor="@color/colorOrange"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/mar_padd_5dp"/>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="2"
+                                android:padding="1dp"
+                                android:gravity="end">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/mar_padd_2dp"
+                                    android:background="@drawable/shape_border">
+
+                                    <Button
+                                        android:id="@+id/button_decrease_count_sports"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:text="-"
+                                        android:gravity="center"
+                                        android:textSize="21sp"
+                                        android:textColor="@color/whitecolor"
+                                        android:background="@color/colorOrange"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/numberOfSports"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:text="@string/_0"
+                                        android:gravity="center"
+                                        android:background="#fff"
+                                        android:textSize="21sp"
+                                        android:textColor="#ec6117"
+                                        android:inputType="number"
+                                        tools:ignore="LabelFor,TextViewEdits" />
+                                    <Button
+                                        android:id="@+id/button_increase_sports"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:text="+"
+                                        android:gravity="center"
+                                        android:textSize="21sp"
+                                        android:background="@color/colorOrange"
+                                        android:textColor="@color/whitecolor"/>
+
+
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sportsLayout"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/mar_padd_5dp"/>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+                <Button
+                android:id="@+id/btnEmployeeEducationSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:layout_marginTop="@dimen/mar_padd_10dp"
+                android:textColor="@color/whitecolor"
+                android:layout_marginLeft="@dimen/dimen50dp"
+                android:layout_marginRight="@dimen/dimen50dp"
+                android:background="@drawable/btn_round_shape_blue"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
