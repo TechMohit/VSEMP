@@ -214,7 +214,7 @@ public class EducationInfoFragment extends Fragment implements View.OnClickListe
 
 
 
-    LinearLayoutManager   layoutManagerForSchoolDocs;
+    LinearLayoutManager layoutManagerForSchoolDocs;
     LinearLayoutManager layoutManagerForPUCDocs;
     LinearLayoutManager layoutManagerForGraduateDocs;
     LinearLayoutManager layoutManagerForPGDocs;
@@ -2683,7 +2683,7 @@ public class EducationInfoFragment extends Fragment implements View.OnClickListe
 
                     int bitmapByteCount1 = BitmapCompat.getAllocationByteCount(scaled);
 
-                    Log.d("djdj", "" + bitmapByteCount + " " + bitmapByteCount1);
+                    Log.d("djdj", "" + bitmapByteCount + " " +  bitmapByteCount1);
 
                     String path = MediaStore.Images.Media.insertImage(getActivity().getContentResolver(), scaled, "Title", null);
                     filePath = Uri.parse(path);
